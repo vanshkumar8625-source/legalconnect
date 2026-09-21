@@ -22,9 +22,11 @@ loginForm.addEventListener("submit", function(event) {
         return;
     }
 
+    // Show login success message
+        alert("Login successful!");
 
-    // Temporary frontend login message
-    alert("Login successful!");
+    // Move user to role selection
+        window.location.href = "role-selection.html";
 
 
     // Later we will connect this with role-based authentication.

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Choose Role | LegalConnect</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="role-selection.css">
+
+</head>
+
+<body>
+
+    <!-- ================= ROLE SELECTION ================= -->
+
+    <main class="role-container">
+
+        <!-- Logo -->
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
+
+        <!-- Heading -->
+        <h1>Choose Your Role</h1>
+
+        <p class="subtitle">
+            Select how you want to use LegalConnect
+        </p>
+
+
+        <!-- ================= ROLE CARDS ================= -->
+
+        <div class="role-cards">
+
+            <!-- CLIENT ROLE -->
+
+            <div class="role-card" onclick="selectRole('Client')">
+
+                <div class="role-icon">
+                    👤
+                </div>
+
+                <h2>Client</h2>
+
+                <p>
+                    Find lawyers, explore their profiles
+                    and book legal consultations.
+                </p>
+
+                <!-- Select button -->
+                <button onclick="selectRole('Client')">
+                    Continue as Client
+                </button>
+
+            </div>
+
+
+            <!-- LAWYER ROLE -->
+
+            <div class="role-card" onclick="selectRole('Lawyer')">
+
+                <div class="role-icon">
+                    👨‍⚖️
+                </div>
+
+                <h2>Lawyer</h2>
+
+                <p>
+                    Manage clients, appointments and
+                    discover junior lawyers or interns.
+                </p>
+
+                <!-- Select button -->
+                <button onclick="selectRole('Lawyer')">
+                    Continue as Lawyer
+                </button>
+
+            </div>
+
+
+            <!-- JUNIOR / INTERN ROLE -->
+
+            <div class="role-card" onclick="selectRole('Junior / Intern')">
+
+                <div class="role-icon">
+                    🎓
+                </div>
+
+                <h2>Junior / Intern</h2>
+
+                <p>
+                    Find internship opportunities and
+                    connect with experienced lawyers.
+                </p>
+
+                <!-- Select button -->
+                <button onclick="selectRole('Junior / Intern')">
+                    Continue as Junior
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Connect JavaScript -->
+    <script src="role-selection.js"></script>
+
+</body>
+
+</html>
