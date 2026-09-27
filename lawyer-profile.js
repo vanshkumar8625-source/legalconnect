@@ -125,16 +125,6 @@ function goBack() {
 
 function bookAppointment() {
 
-    if (selectedLawyer) {
-
-        alert(
-            "Appointment Booking\n\n" +
-            "You are booking a consultation with\n" +
-            selectedLawyer.name +
-            ".\n\n" +
-            "Appointment booking feature will be available soon."
-        );
-
-    }
+    window.location.href = "appointment.html";
 
 }

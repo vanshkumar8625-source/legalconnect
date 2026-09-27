@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Book Appointment | LegalConnect</title>
+
+    <!-- Appointment CSS -->
+    <link rel="stylesheet" href="appointment.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
+
+        <button class="back-btn"
+                onclick="goBack()">
+            ← Back to Profile
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="appointment-container">
+
+        <!-- Page heading -->
+
+        <div class="page-heading">
+
+            <p class="page-label">
+                Legal Consultation
+            </p>
+
+            <h1>
+                Book an Appointment
+            </h1>
+
+            <p>
+                Schedule an online consultation with your selected lawyer.
+            </p>
+
+        </div>
+
+
+        <!-- ================= BOOKING LAYOUT ================= -->
+
+        <div class="booking-layout">
+
+
+            <!-- ================= LAWYER CARD ================= -->
+
+            <section class="lawyer-summary">
+
+                <h2>
+                    Selected Lawyer
+                </h2>
+
+                <div class="lawyer-info">
+
+                    <div class="lawyer-avatar"
+                         id="lawyerInitials">
+                        --
+                    </div>
+
+                    <div>
+
+                        <h3 id="lawyerName">
+                            Loading...
+                        </h3>
+
+                        <p id="lawyerSpecialization">
+                            Loading...
+                        </p>
+
+                        <p id="lawyerExperience">
+                            Loading...
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="consultation-fee">
+
+                    <span>
+                        Consultation Fee
+                    </span>
+
+                    <strong>
+                        ₹500
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= BOOKING FORM ================= -->
+
+            <section class="booking-card">
+
+                <h2>
+                    Appointment Details
+                </h2>
+
+
+                <!-- Date -->
+
+                <div class="form-group">
+
+                    <label for="appointmentDate">
+                        Select Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="form-group">
+
+                    <label for="appointmentTime">
+                        Select Time
+                    </label>
+
+                    <select id="appointmentTime">
+
+                        <option value="">
+                            Select a time
+                        </option>
+
+                        <option value="10:00 AM">
+                            10:00 AM
+                        </option>
+
+                        <option value="11:00 AM">
+                            11:00 AM
+                        </option>
+
+                        <option value="12:00 PM">
+                            12:00 PM
+                        </option>
+
+                        <option value="2:00 PM">
+                            2:00 PM
+                        </option>
+
+                        <option value="3:00 PM">
+                            3:00 PM
+                        </option>
+
+                        <option value="4:00 PM">
+                            4:00 PM
+                        </option>
+
+                        <option value="5:00 PM">
+                            5:00 PM
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Consultation Type -->
+
+                <div class="form-group">
+
+                    <label for="consultationType">
+                        Consultation Type
+                    </label>
+
+                    <select id="consultationType">
+
+                        <option value="">
+                            Select consultation type
+                        </option>
+
+                        <option value="Video Consultation">
+                            🎥 Video Consultation
+                        </option>
+
+                        <option value="Audio Consultation">
+                            📞 Audio Consultation
+                        </option>
+
+                        <option value="Chat Consultation">
+                            💬 Chat Consultation
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Legal Problem -->
+
+                <div class="form-group">
+
+                    <label for="legalIssue">
+                        Describe Your Legal Issue
+                    </label>
+
+                    <textarea
+                        id="legalIssue"
+                        rows="5"
+                        placeholder="Briefly describe your legal problem..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Confirm Button -->
+
+                <button
+                    class="confirm-btn"
+                    onclick="confirmAppointment()">
+
+                    ✅ Confirm Appointment
+
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="appointment.js"></script>
+
+</body>
+
+</html>
