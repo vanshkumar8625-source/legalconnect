@@ -1,10 +1,25 @@
-// This function runs when the user selects a role
 function selectRole(role) {
 
-    // Save the selected role in browser storage
+    // Save the selected role
     localStorage.setItem("userRole", role);
 
-    // Show the selected role
-    alert("You selected: " + role);
+    // Check which role was selected
+    if (role === "Client") {
+
+        window.location.href = "client-dashboard.html";
+
+    }
+
+    else if (role === "Lawyer") {
+
+        window.location.href = "lawyer-dashboard.html";
+
+    }
+
+    else if (role === "Junior / Intern") {
+
+        window.location.href = "intern-dashboard.html";
+
+    }
 
 }

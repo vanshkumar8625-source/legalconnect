@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Basic page settings -->
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<!-- Page title -->
+<title>Client Dashboard | LegalConnect</title>
+<!-- Dashboard CSS -->
+<link rel="stylesheet" href="client-dashboard.css">
+</head>
+<body>
+<!-- ================= DASHBOARD ================= -->
+<div class="dashboard">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+            <a href="#" class="active">
+                🏠 Dashboard
+            </a>
+            <a href="#">
+                🔎 Find Lawyers
+            </a>
+            <a href="#">
+                📅 Appointments
+            </a>
+            <a href="#">
+                📄 Documents
+            </a>
+            <a href="#">
+                💬 Messages
+            </a>
+        </nav>
+        <!-- Bottom navigation -->
+        <div class="sidebar-bottom">
+            <a href="#">
+                ⚙️ Settings
+            </a>
+            <a href="index.html">
+                🚪 Logout
+            </a>
+        </div>
+    </aside>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+        <!-- ================= TOP BAR ================= -->
+        <header class="topbar">
+            <div>
+                <p class="page-label">
+                    Client Dashboard
+                </p>
+                <h1>
+                    Welcome back, Vansh 👋
+                </h1>
+            </div>
+            <!-- Profile -->
+            <div class="profile">
+                <div class="profile-avatar">
+                    V
+                </div>
+                <div>
+                    <strong>
+                        Vansh Kumar
+                    </strong>
+                    <small>
+                        Client
+                    </small>
+                </div>
+            </div>
+        </header>
+        <!-- ================= SEARCH ================= -->
+        <section class="search-section">
+            <div>
+                <h2>
+                    Find the Right Lawyer
+                </h2>
+                <p>
+                    Search for legal professionals based
+                    on your legal needs.
+                </p>
+            </div>
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="lawyerSearch"
+                    placeholder="Search by specialization..."
+                >
+                <button id="searchBtn">
+                    🔎 Search
+                </button>
+            </div>
+        </section>
+        <!-- ================= QUICK STATS ================= -->
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">
+                    📅
+                </span>
+                <div>
+                    <p>Upcoming Appointments</p>
+                    <h3>2</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">
+                    ⚖️
+                </span>
+                <div>
+                    <p>Lawyers Consulted</p>
+                    <h3>4</h3>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">
+                    📄
+                </span>
+                <div>
+                    <p>Documents</p>
+                    <h3>6</h3>
+                </div>
+            </div>
+        </section>
+        <!-- ================= RECOMMENDED LAWYERS ================= -->
+        <section class="lawyers-section">
+            <div class="section-header">
+                <div>
+                    <h2>
+                        Recommended Lawyers
+                    </h2>
+                    <p>
+                        Legal professionals you may be interested in.
+                    </p>
+                </div>
+                <button class="view-all">
+                    View All
+                </button>
+            </div>
+            <!-- Lawyer Cards -->
+            <div class="lawyer-grid">
+                <!-- Lawyer 1 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-avatar">
+                        AS
+                    </div>
+                    <h3>
+                        Adv. Ananya Sharma
+                    </h3>
+                    <p class="specialization">
+                        Corporate Law
+                    </p>
+                    <p class="experience">
+                        ⭐ 4.8 · 8 Years Experience
+                    </p>
+                    <button>
+                        View Profile
+                    </button>
+                </div>
+                <!-- Lawyer 2 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-avatar">
+                        RK
+                    </div>
+                    <h3>
+                        Adv. Rahul Kapoor
+                    </h3>
+                    <p class="specialization">
+                        Criminal Law
+                    </p>
+                    <p class="experience">
+                        ⭐ 4.7 · 10 Years Experience
+                    </p>
+                    <button>
+                        View Profile
+                    </button>
+                </div>
+                <!-- Lawyer 3 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-avatar">
+                        PN
+                    </div>
+                    <h3>
+                        Adv. Priya Nair
+                    </h3>
+                    <p class="specialization">
+                        Family Law
+                    </p>
+                    <p class="experience">
+                        ⭐ 4.9 · 6 Years Experience
+                    </p>
+                    <button>
+                        View Profile
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- ================= APPOINTMENTS ================= -->
+        <section class="appointments">
+            <div class="section-header">
+                <div>
+                    <h2>
+                        Upcoming Appointments
+                    </h2>
+                    <p>
+                        Keep track of your scheduled consultations.
+                    </p>
+                </div>
+                <button class="view-all">
+                    View All
+                </button>
+            </div>
+            <div class="appointment-card">
+                <div class="appointment-info">
+                    <div class="lawyer-avatar small">
+                        AS
+                    </div>
+                    <div>
+                        <h3>
+                            Adv. Ananya Sharma
+                        </h3>
+                        <p>
+                            Corporate Law Consultation
+                        </p>
+                    </div>
+                </div>
+                <div class="appointment-date">
+                    <strong>
+                        28 Sep 2026
+                    </strong>
+                    <span>
+                        11:00 AM
+                    </span>
+                </div>
+                <button class="join-btn">
+                    View Details
+                </button>
+            </div>
+        </section>
+    </main>
+</div>
+<!-- Dashboard JavaScript -->
+<script src="client-dashboard.js"></script>
+</body>
+</html>

@@ -16,41 +16,63 @@
 </head>
 
 <body>
+<!-- ================= LOGIN CONTAINER ================= -->
 
-    <!-- ================= LOGIN CONTAINER ================= -->
+<div class="login-container">
 
-    <div class="login-container">
+    <!-- ================= LEFT SIDE ================= -->
 
-        <!-- Left side -->
-        <div class="login-info">
+    <div class="login-info">
 
-            <h1>⚖️ LegalConnect</h1>
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
 
-            <h2>Welcome Back!</h2>
+        <h1>
+            Welcome Back!
+        </h1>
 
-            <p>
-                Connect with lawyers, clients and legal
-                opportunities through one platform.
-            </p>
+        <p>
+            Connect with legal professionals,
+            manage your consultations and continue
+            your legal journey.
+        </p>
+
+        <div class="info-points">
+
+            <p>✓ Find verified legal professionals</p>
+
+            <p>✓ Manage appointments easily</p>
+
+            <p>✓ Explore legal opportunities</p>
 
         </div>
 
-
-        <!-- Right side - Login Form -->
-        <div class="login-box">
-
-            <h2>Login to your account</h2>
-
-            <p class="subtitle">
-                Enter your details to continue
-            </p>
+    </div>
 
 
-            <!-- Login Form -->
-            <form id="loginForm">
+    <!-- ================= RIGHT SIDE ================= -->
 
-                <!-- Email -->
-                <label for="email">Email Address</label>
+    <div class="login-box">
+
+        <h2>Login to LegalConnect</h2>
+
+        <p class="login-subtitle">
+            Enter your details to continue
+        </p>
+
+
+        <!-- Login Form -->
+
+        <form id="loginForm">
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
 
                 <input
                     type="email"
@@ -59,9 +81,16 @@
                     required
                 >
 
+            </div>
 
-                <!-- Password -->
-                <label for="password">Password</label>
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
 
                 <input
                     type="password"
@@ -70,47 +99,61 @@
                     required
                 >
 
-
-                <!-- Remember + Forgot password -->
-                <div class="login-options">
-
-                    <label>
-                        <input type="checkbox">
-                        Remember me
-                    </label>
-
-                    <a href="#">Forgot Password?</a>
-
-                </div>
+            </div>
 
 
-                <!-- Login button -->
-                <button type="submit" class="login-button">
-                    Login
-                </button>
+            <!-- Remember + Forgot Password -->
 
-            </form>
+            <div class="login-options">
 
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                </label>
 
-            <!-- Signup option -->
-            <p class="signup-text">
-
-                Don't have an account?
-
-                <a href="#" id="signupLink">
-                    Create Account
+                <a href="#">
+                    Forgot Password?
                 </a>
 
-            </p>
+            </div>
 
-        </div>
+
+            <!-- Login Button -->
+
+            <button type="submit" class="login-submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <!-- Register -->
+
+        <p class="register-text">
+
+            Don't have an account?
+
+            <a href="register.html">
+                Create Account
+            </a>
+
+        </p>
+
+
+        <!-- Back to Home -->
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
 
     </div>
 
+</div>
 
-    <!-- Connect JavaScript -->
-    <script src="login.js"></script>
 
+<!-- JavaScript -->
+
+<script src="login.js"></script>
 </body>
 
 </html>
