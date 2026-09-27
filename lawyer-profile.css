@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #243b53;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #102a43;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+    border: none;
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.profile-container {
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 0 25px;
+}
+
+
+/* ================= LAWYER HEADER ================= */
+
+.lawyer-header {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= LAWYER AVATAR ================= */
+
+.large-avatar {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* ================= LAWYER INFORMATION ================= */
+
+.lawyer-basic-info h1 {
+    color: #102a43;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.specialization {
+    color: #2563eb;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.rating {
+    color: #243b53;
+
+    margin-bottom: 6px;
+}
+
+.experience {
+    color: #627d98;
+
+    font-size: 14px;
+}
+
+
+/* ================= PROFILE CONTENT ================= */
+
+.profile-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+.profile-card h2 {
+    color: #102a43;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #627d98;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ================= PRACTICE AREAS ================= */
+
+.practice-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.practice-list span {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ================= CONSULTATION ================= */
+
+.consultation-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* ================= BOOK BUTTON ================= */
+
+.book-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .profile-container {
+        margin: 25px auto;
+
+        padding: 0 15px;
+    }
+
+    .lawyer-header {
+        padding: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .consultation-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+}

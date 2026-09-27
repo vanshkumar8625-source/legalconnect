@@ -1,126 +1,160 @@
 // ================= LAWYER DATA =================
 
 // Temporary lawyer data
-// Later this can come from a database/backend
+// Later this data can come from a backend/database
 
 const lawyers = [
+    {
+        name: "Adv. Ananya Sharma",
+        initials: "AS",
+        specialization: "Corporate Law",
+        experience: "8 Years Experience",
+        rating: "4.8"
+    },
 
-{
-    name: "Adv. Ananya Sharma",
-    initials: "AS",
-    specialization: "Corporate Law",
-    experience: "8 Years Experience",
-    rating: "4.8"
-},
-{
-    name: "Adv. Rahul Kapoor",
-    initials: "RK",
-    specialization: "Criminal Law",
-    experience: "10 Years Experience",
-    rating: "4.7"
-},
-{
-    name: "Adv. Priya Nair",
-    initials: "PN",
-    specialization: "Family Law",
-    experience: "6 Years Experience",
-    rating: "4.9"
-}
+    {
+        name: "Adv. Rahul Kapoor",
+        initials: "RK",
+        specialization: "Criminal Law",
+        experience: "10 Years Experience",
+        rating: "4.7"
+    },
 
+    {
+        name: "Adv. Priya Nair",
+        initials: "PN",
+        specialization: "Family Law",
+        experience: "6 Years Experience",
+        rating: "4.9"
+    }
 ];
 
-// ================= SEARCH =================
 
-// Get search input
-const searchInput = document.getElementById(“lawyerSearch”);
+// ================= GET HTML ELEMENTS =================
 
-// Get search button
-const searchButton = document.getElementById(“searchBtn”);
+// Search input
+const searchInput = document.getElementById("lawyerSearch");
 
-// Run search when button is clicked
-searchButton.addEventListener(“click”, function() {
+// Search button
+const searchButton = document.getElementById("searchBtn");
 
-// Get the text entered by the user
-const searchText = searchInput.value.toLowerCase().trim();
-// Find matching lawyers
-const results = lawyers.filter(function(lawyer) {
-    return lawyer.specialization
-        .toLowerCase()
-        .includes(searchText);
-});
-// Display the results
-displayLawyers(results);
+// Lawyer cards container
+const lawyerGrid = document.querySelector(".lawyer-grid");
 
-});
 
 // ================= DISPLAY LAWYERS =================
 
 function displayLawyers(lawyerList) {
 
-// Get the lawyer grid
-const lawyerGrid = document.querySelector(".lawyer-grid");
-// Clear existing cards
-lawyerGrid.innerHTML = "";
-// If no lawyer is found
-if (lawyerList.length === 0) {
-    lawyerGrid.innerHTML = `
-        <p class="no-results">
-            No lawyers found for your search.
-        </p>
-    `;
-    return;
+    // Remove existing lawyer cards
+    lawyerGrid.innerHTML = "";
+
+    // Check if no lawyer was found
+    if (lawyerList.length === 0) {
+
+        lawyerGrid.innerHTML = `
+            <p class="no-results">
+                No lawyers found for your search.
+            </p>
+        `;
+
+        return;
+    }
+
+    // Create a card for every lawyer
+    lawyerList.forEach(function(lawyer) {
+
+        const card = document.createElement("div");
+
+        card.classList.add("lawyer-card");
+
+        card.innerHTML = `
+            <div class="lawyer-avatar">
+                ${lawyer.initials}
+            </div>
+
+            <h3>
+                ${lawyer.name}
+            </h3>
+
+            <p class="specialization">
+                ${lawyer.specialization}
+            </p>
+
+            <p class="experience">
+                ⭐ ${lawyer.rating} · ${lawyer.experience}
+            </p>
+
+            <button onclick="viewProfile('${lawyer.name}')">
+                View Profile
+            </button>
+        `;
+
+        lawyerGrid.appendChild(card);
+    });
 }
-// Create a card for every lawyer
-lawyerList.forEach(function(lawyer, index) {
-    const card = document.createElement("div");
-    card.classList.add("lawyer-card");
-    card.innerHTML = `
-        <div class="lawyer-avatar">
-            ${lawyer.initials}
-        </div>
-        <h3>
-            ${lawyer.name}
-        </h3>
-        <p class="specialization">
-            ${lawyer.specialization}
-        </p>
-        <p class="experience">
-            ⭐ ${lawyer.rating} · ${lawyer.experience}
-        </p>
-        <button onclick="viewProfile(${index})">
-            View Profile
-        </button>
-    `;
-    lawyerGrid.appendChild(card);
+
+
+// ================= SEARCH LAWYERS =================
+
+searchButton.addEventListener("click", function() {
+
+    // Get search text
+    const searchText = searchInput.value
+        .toLowerCase()
+        .trim();
+
+    // Find matching lawyers
+    const results = lawyers.filter(function(lawyer) {
+
+        return lawyer.specialization
+            .toLowerCase()
+            .includes(searchText);
+
+    });
+
+    // Display results
+    displayLawyers(results);
 });
 
+
+// ================= SEARCH USING ENTER =================
+
+searchInput.addEventListener("keypress", function(event) {
+
+    if (event.key === "Enter") {
+        searchButton.click();
+    }
+
+});
+
+
+// ================= VIEW LAWYER PROFILE =================
+
+function viewProfile(lawyerName) {
+
+    // Save selected lawyer
+    localStorage.setItem("selectedLawyer", lawyerName);
+
+    // Open lawyer profile page
+    window.location.href = "lawyer-profile.html";
 }
 
-// ================= VIEW PROFILE =================
 
-function viewProfile(index) {
+// ================= INITIAL DISPLAY =================
 
-// Get selected lawyer
-const lawyer = lawyers[index];
-// Show lawyer information
-alert(
-    "Lawyer Profile\n\n" +
-    "Name: " + lawyer.name + "\n" +
-    "Specialization: " + lawyer.specialization + "\n" +
-    "Experience: " + lawyer.experience + "\n" +
-    "Rating: ⭐ " + lawyer.rating
-);
+// Show all lawyers when dashboard opens
+displayLawyers(lawyers);
 
-}
 
 // ================= USER ROLE =================
 
-// Get role saved during role selection
-const userRole = localStorage.getItem(“userRole”);
+// Get the role saved during role selection
+const userRole = localStorage.getItem("userRole");
 
-// Check if role exists
+// Check whether a role exists
 if (userRole) {
 
-console.log("Logged in as:", userRole);
+    console.log("Logged in as:", userRole);
 
 }

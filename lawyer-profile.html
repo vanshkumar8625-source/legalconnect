@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Lawyer Profile | LegalConnect</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="lawyer-profile.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
+
+        <button class="back-btn" onclick="goBack()">
+            ← Back to Dashboard
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="profile-container">
+
+
+        <!-- ================= LAWYER HEADER ================= -->
+
+        <section class="lawyer-header">
+
+            <!-- Lawyer initials -->
+            <div class="large-avatar" id="lawyerInitials">
+                --
+            </div>
+
+
+            <!-- Lawyer information -->
+            <div class="lawyer-basic-info">
+
+                <h1 id="lawyerName">
+                    Loading...
+                </h1>
+
+                <p class="specialization"
+                   id="lawyerSpecialization">
+                    Loading...
+                </p>
+
+                <p class="rating"
+                   id="lawyerRating">
+                    ⭐ --
+                </p>
+
+                <p class="experience"
+                   id="lawyerExperience">
+                    💼 --
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE CONTENT ================= -->
+
+        <section class="profile-content">
+
+
+            <!-- ================= ABOUT ================= -->
+
+            <div class="profile-card">
+
+                <h2>
+                    About the Lawyer
+                </h2>
+
+                <p id="lawyerAbout">
+                    Loading lawyer information...
+                </p>
+
+            </div>
+
+
+            <!-- ================= AREAS OF PRACTICE ================= -->
+
+            <div class="profile-card">
+
+                <h2>
+                    Areas of Practice
+                </h2>
+
+                <div class="practice-list"
+                     id="practiceList">
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOOK APPOINTMENT ================= -->
+
+            <div class="profile-card consultation-card">
+
+                <div>
+
+                    <h2>
+                        Book a Consultation
+                    </h2>
+
+                    <p>
+                        Schedule an online consultation
+                        with this lawyer.
+                    </p>
+
+                </div>
+
+
+                <button class="book-btn"
+                        onclick="bookAppointment()">
+
+                    📅 Book Appointment
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="lawyer-profile.js"></script>
+
+</body>
+
+</html>
