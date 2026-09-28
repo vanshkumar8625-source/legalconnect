@@ -252,3 +252,20 @@ function viewAppointmentDetails() {
         "Legal Issue:\n" + appointment.legalIssue
     );
 }
+
+// ================= APPOINTMENT COUNT =================
+
+// Get saved appointment
+const appointment =
+    JSON.parse(localStorage.getItem("appointment"));
+
+// Get appointment count element
+const appointmentCount =
+    document.getElementById("appointmentCount");
+
+// Check if an appointment exists
+if (appointment) {
+    appointmentCount.textContent = "1";
+} else {
+    appointmentCount.textContent = "0";
+}
