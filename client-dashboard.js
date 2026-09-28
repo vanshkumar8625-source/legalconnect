@@ -158,3 +158,97 @@ if (userRole) {
     console.log("Logged in as:", userRole);
 
 }
+
+// ================= UPCOMING APPOINTMENT =================
+
+// Get saved appointment from localStorage
+const savedAppointment =
+    JSON.parse(localStorage.getItem("appointment"));
+
+// Get appointment card
+const appointmentCard =
+    document.getElementById("appointmentCard");
+
+// Check if an appointment exists
+if (savedAppointment) {
+
+    // Find lawyer details
+    const appointmentLawyer = lawyers.find(function(lawyer) {
+        return lawyer.name === savedAppointment.lawyer;
+    });
+
+    if (appointmentLawyer) {
+
+        appointmentCard.innerHTML = `
+            <div class="appointment-info">
+
+                <div class="lawyer-avatar small">
+                    ${appointmentLawyer.initials}
+                </div>
+
+                <div>
+                    <h3>
+                        ${appointmentLawyer.name}
+                    </h3>
+
+                    <p>
+                        ${appointmentLawyer.specialization}
+                        Consultation
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="appointment-date">
+
+                <strong>
+                    ${savedAppointment.date}
+                </strong>
+
+                <span>
+                    ${savedAppointment.time}
+                </span>
+
+            </div>
+
+            <button class="join-btn"
+                    onclick="viewAppointmentDetails()">
+                View Details
+            </button>
+        `;
+    }
+
+} else {
+
+    // No appointment found
+    appointmentCard.innerHTML = `
+        <div class="no-appointment">
+            <p>
+                📅 No upcoming appointments.
+            </p>
+        </div>
+    `;
+}
+
+
+// ================= VIEW APPOINTMENT DETAILS =================
+
+function viewAppointmentDetails() {
+
+    const appointment =
+        JSON.parse(localStorage.getItem("appointment"));
+
+    if (!appointment) {
+        alert("No appointment found.");
+        return;
+    }
+
+    alert(
+        "Appointment Details\n\n" +
+        "Lawyer: " + appointment.lawyer + "\n" +
+        "Date: " + appointment.date + "\n" +
+        "Time: " + appointment.time + "\n" +
+        "Type: " + appointment.consultationType + "\n\n" +
+        "Legal Issue:\n" + appointment.legalIssue
+    );
+}
