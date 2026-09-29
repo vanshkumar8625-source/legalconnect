@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lawyer Dashboard | LegalConnect</title>
+
+    <link rel="stylesheet" href="lawyer-dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                ⚖️ LegalConnect
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="#" class="active">
+                    🏠 Dashboard
+                </a>
+
+                <a href="#">
+                    📅 Appointments
+                </a>
+
+                <a href="#">
+                    👥 Clients
+                </a>
+
+                <a href="#">
+                    📄 Documents
+                </a>
+
+                <a href="#">
+                    💬 Messages
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#">
+                    ⚙️ Settings
+                </a>
+
+                <a href="index.html">
+                    🚪 Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+
+                    <p class="page-label">
+                        Lawyer Dashboard
+                    </p>
+
+                    <h1>
+                        Welcome back, Adv. Ananya Sharma 👋
+                    </h1>
+
+                </div>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        AS
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Adv. Ananya Sharma
+                        </strong>
+
+                        <small>
+                            Lawyer
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- STATS -->
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <p>Pending Appointments</p>
+
+                        <h3>0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        👥
+                    </span>
+
+                    <div>
+
+                        <p>Total Clients</p>
+
+                        <h3>0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        🗓️
+                    </span>
+
+                    <div>
+
+                        <p>Today's Appointments</p>
+
+                        <h3>0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        ⭐
+                    </span>
+
+                    <div>
+
+                        <p>Rating</p>
+
+                        <h3>4.8</h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- APPOINTMENTS -->
+            <section class="appointments">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Appointment Requests
+                        </h2>
+
+                        <p>
+                            Manage consultation requests from clients.
+                        </p>
+
+                    </div>
+
+                    <button class="view-all">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div id="appointmentList">
+
+                    <div class="empty-state">
+
+                        <p>
+                            📅 No appointment requests.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT CLIENTS -->
+            <section class="clients-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Clients
+                        </h2>
+
+                        <p>
+                            Clients who recently consulted you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="client-grid">
+
+                    <div class="client-card">
+
+                        <div class="client-avatar">
+                            VK
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Vansh Kumar
+                            </h3>
+
+                            <p>
+                                Corporate Law
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card">
+
+                        <div class="client-avatar">
+                            AK
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Arjun Kapoor
+                            </h3>
+
+                            <p>
+                                Contract Dispute
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card">
+
+                        <div class="client-avatar">
+                            PS
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Priya Singh
+                            </h3>
+
+                            <p>
+                                Family Law
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="lawyer-dashboard.js"></script>
+
+</body>
+
+</html>
