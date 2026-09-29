@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Junior Dashboard | LegalConnect</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="intern-dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+
+        <!-- Website logo -->
+        <div class="logo">
+            ⚖️ LegalConnect
+        </div>
+
+        <!-- Navigation links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Opportunities</a>
+            <a href="#">Applications</a>
+
+            <!-- Logout button -->
+            <button onclick="logout()">Logout</button>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN DASHBOARD ================= -->
+    <main class="dashboard">
+
+        <!-- Welcome section -->
+        <section class="welcome-section">
+
+            <div>
+                <p class="small-text">Junior / Intern Dashboard</p>
+
+                <h1>
+                    Welcome to LegalConnect 👋
+                </h1>
+
+                <p>
+                    Find legal internship opportunities and
+                    connect with experienced lawyers.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+        <section class="stats-container">
+
+            <!-- Available opportunities -->
+            <div class="stat-card">
+                <h3>Available Opportunities</h3>
+                <p id="opportunityCount">0</p>
+            </div>
+
+            <!-- Applications -->
+            <div class="stat-card">
+                <h3>My Applications</h3>
+                <p id="applicationCount">0</p>
+            </div>
+
+            <!-- Accepted applications -->
+            <div class="stat-card">
+                <h3>Accepted</h3>
+                <p id="acceptedCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= OPPORTUNITIES ================= -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Available Opportunities 💼</h2>
+
+                    <p>
+                        Explore internships posted by lawyers.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript will add opportunity cards here -->
+            <div id="opportunityList" class="opportunity-list">
+
+                <!-- Example message -->
+                <p class="empty-message">
+                    Loading opportunities...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATIONS ================= -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>My Applications 📋</h2>
+
+                    <p>
+                        Track the applications you have submitted.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript will add applications here -->
+            <div id="applicationList" class="application-list">
+
+                <p class="empty-message">
+                    No applications yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="intern-dashboard.js"></script>
+
+</body>
+
+</html>
