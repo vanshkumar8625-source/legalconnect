@@ -9,7 +9,26 @@
 
 // Get internship opportunities
 let opportunities =
-    JSON.parse(localStorage.getItem("internshipOpportunities")) || [];
+    JSON.parse(localStorage.getItem("internshipOpportunities")) || [
+        {
+            id: "1",
+            title: "Legal Research Intern",
+            lawyer: "Senior Advocate",
+            duration: "2 Months",
+            skills: "Legal Research, Case Analysis",
+            stipend: "₹5,000/month",
+            description: "Assist with legal research and case preparation."
+        },
+        {
+            id: "2",
+            title: "Corporate Law Intern",
+            lawyer: "Corporate Lawyer",
+            duration: "1 Month",
+            skills: "Corporate Law, Documentation",
+            stipend: "₹7,000/month",
+            description: "Assist in corporate legal documentation and research."
+        }
+    ];
 
 // Get applications submitted by the junior
 let applications =
@@ -279,6 +298,10 @@ function logout() {
     window.location.href = "login.html";
 
 }
+localStorage.setItem(
+    "internshipOpportunities",
+    JSON.stringify(opportunities)
+);
 
 
 /* =========================================
