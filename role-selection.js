@@ -18,7 +18,7 @@ function selectRole(role) {
 
     else if (role === "Junior / Intern") {
 
-        window.location.href = "intern-dashboard.html";
+        window.location.href = "junior-dashboard.html";
 
     }
 
