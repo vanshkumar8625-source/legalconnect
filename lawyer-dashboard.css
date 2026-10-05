@@ -462,3 +462,150 @@ body {
         display: none;
     }
 }
+/* =========================================
+   INTERNSHIP SECTION
+========================================= */
+
+.internship-section {
+    margin-top: 35px;
+}
+
+
+/* SECTION HEADER */
+
+.internship-section .section-header {
+    margin-bottom: 20px;
+}
+
+
+/* INTERNSHIP FORM CARD */
+
+.internship-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    margin-top: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* INPUTS */
+
+.internship-form input,
+.internship-form textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    background: #f9fafb;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* INPUT FOCUS */
+
+.internship-form input:focus,
+.internship-form textarea:focus {
+
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* TEXTAREA */
+
+.internship-form textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* PLACEHOLDER */
+
+.internship-form input::placeholder,
+.internship-form textarea::placeholder {
+
+    color: #9ca3af;
+}
+
+
+/* POST BUTTON */
+
+.internship-form button {
+
+    width: fit-content;
+
+    padding: 13px 24px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+/* BUTTON HOVER */
+
+.internship-form button:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* BUTTON CLICK */
+
+.internship-form button:active {
+
+    transform: translateY(0);
+}
+
+
+/* POSTED INTERNSHIPS */
+
+#postedInternships {
+
+    margin-top: 25px;
+
+    display: grid;
+
+    gap: 15px;
+}
